@@ -8,7 +8,7 @@ on:
       - published
 
 jobs:
-  build-containers:
+  do-thing:
     runs-on: ubuntu-18.04
     steps:
       - name: Do stuff (manual)
