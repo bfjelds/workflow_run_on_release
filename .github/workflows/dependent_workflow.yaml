@@ -5,7 +5,7 @@ on:
     workflows: ["Manual or Release triggered"]
     branches:
       - main
-      - releases/**
+      - 'releases/**'
     types: 
       - completed
 
