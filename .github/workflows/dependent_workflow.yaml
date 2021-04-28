@@ -5,7 +5,7 @@ on:
     workflows: ["Manual or Release triggered"]
     branches:
       - main
-      - 'v[0-9]+.[0-9]+.[0-9]+[\-[\.a-zA-Z0-9]+]?'
+      - 'v[0-9]+.[0-9]+.[0-9]+(-[a-zA-Z0-9]+)?'
     types: 
       - completed
 
