@@ -1,0 +1,21 @@
+name: Manual or Release triggered
+
+on:
+  workflow_dispatch:
+    inputs:
+  release:
+    types:
+      - published
+
+jobs:
+  build-containers:
+    runs-on: ubuntu-18.04
+    steps:
+      - name: Do stuff (manual)
+        if: startsWith(github.event_name, 'workflow_dispatch')
+        run: |
+          echo "Hello, I've been manually triggered!"
+      - name: Do stuff (release)
+        if: startsWith(github.event_name, 'release')
+        run: |
+          echo "Hello, I've been triggered by a release!"
