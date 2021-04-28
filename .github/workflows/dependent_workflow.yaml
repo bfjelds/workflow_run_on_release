@@ -3,7 +3,9 @@ name: Dependent workflow
 on:
   workflow_run:
     workflows: ["Manual or Release triggered"]
-    #branches: [main]
+    branches:
+      - main
+      - releases/**
     types: 
       - completed
 
